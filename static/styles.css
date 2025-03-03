@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box; /* Добавлено для управления размерами элементов */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Изменено на flex-start для начала с верхней части */
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('/static/images/start.jpg'); /* Укажите относительный путь к вашему изображению */
+    background-size: cover; /* Чтобы изображение занимало весь фон */
+    background-position: center; /* Центрируем изображение */
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.0); /* Более прозрачный фон */
+    padding: 10px;
+    text-align: center;
+    width: 100%; /* Занимает всю ширину */
+    position: relative; /* Изменено на relative для нормального потока документа */
+    z-index: 10; /* Устанавливаем уровень над другими элементами */
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row; /* Элементы располагаются в строку */
+    width: calc(100% - 20px); /* Ширина контейнера с учетом отступов */
+    margin: 10px; /* Отступы от краев экрана (10px со всех сторон) */
+    height: calc(100vh - 60px); /* Высота контейнера на 100% от высоты экрана минус высота заголовка */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение кнопок */
+    flex: 0.3; /* Занимает 1/3 ширины */
+    padding: 10px; /* Отступ внутри контейнера */
+    border-radius: 10px;
+    margin-right: 10px; /* Отступ между кнопками и результатами */
+    min-width: 150px; /* Минимальная ширина контейнера для адаптивности */
+}
+
+.result-container {
+    flex: 2; /* Занимает 2/3 ширины */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    height: 90%; /* Занимает всю высоту контейнера */
+    overflow-y: auto; /* Прокрутка по вертикали */
+    margin-bottom: -10px; /* Убираем нижний отступ */
+}
+
+.results {
+    max-height: 100%; /* Чтобы результаты занимали всю высоту контейнера */
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+.greeting {
+    color: white; /* Укажите желаемый цвет текста */
+    font-size: 36px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    margin: 20px 0; /* Отступы сверху и снизу */
+    text-align: center; /* Центрируем текст */
+}
+
+.action-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px 0; /* Отступ между кнопками по вертикали */
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black; /* Цвет текста кнопок */
+    border: none; /* Убираем рамку */
+    border-radius: 10px; /* Закругленные углы */
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: rgba(255, 255, 255, 0.6); /* Темнее при наведении */
+}
+
